@@ -42,7 +42,7 @@ else
 fi
 
 if [ ! -d packet_forwarder ]; then
-    git clone https://github.com/kersing/packet_forwarder.git  || { echo 'Cloning packet forwarder failed.' ; exit 1; }
+    git clone https://github.com/DigitalTeam/packet_forwarder.git  || { echo 'Cloning packet forwarder failed.' ; exit 1; }
 else
     cd packet_forwarder
     git reset --hard
