@@ -66,7 +66,7 @@ placement = ""
 latitude = os.getenv('GW_REF_LATITUDE', 0)
 longitude = os.getenv('GW_REF_LONGITUDE', 0)
 altitude = os.getenv('GW_REF_ALTITUDE', 0)
-frequency_plan_url = os.getenv('FREQ_PLAN_URL', "https://%s/api/v2/frequency-plans/EU_863_870" % account_server_domain)
+frequency_plan_url = os.getenv('FREQ_PLAN_URL', "https://%s/api/v2/frequency-plans/AS_923_925" % account_server_domain)
 
 """
 Takes a router address as input, and returns it in the format expected for the packet forwarder configuration
@@ -124,8 +124,8 @@ if(os.getenv('SERVER_TTN', "true")=="true"):
     print ("Unable to parse configuration from TTN")
     sys.exit(0)
 
-  frequency_plan = ttn_config.get('frequency_plan', "EU_863_870")
-  frequency_plan_url = ttn_config.get('frequency_plan_url', "https://%s/api/v2/frequency-plans/EU_863_870" % account_server_domain)
+  frequency_plan = ttn_config.get('frequency_plan', "AS_923_925")
+  frequency_plan_url = ttn_config.get('frequency_plan_url', "https://%s/api/v2/frequency-plans/AS_923_925" % account_server_domain)
 
   if os.environ.get("ROUTER_MQTT_ADDRESS"):
     router = sanitize_router_address(os.environ.get("ROUTER_MQTT_ADDRESS"))
